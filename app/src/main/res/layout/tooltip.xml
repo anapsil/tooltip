@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:background="@android:color/holo_blue_dark">
+
+    <TextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/close"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="Teste de uso do tooltip com texto bem grande pra quebrar linha e ver como q vai ficar na tela"/>
+
+    <ImageView
+            android:id="@id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/content"
+            android:contentDescription="Fechar tooltip"
+            app:srcCompat="@drawable/ic_close"/>
+</RelativeLayout>
