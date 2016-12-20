@@ -2,32 +2,79 @@
 <android.support.design.widget.CoordinatorLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:padding="8dp">
 
-    <android.support.v7.widget.Toolbar android:layout_width="match_parent"
-                                       android:layout_height="?attr/actionBarSize"/>
+    <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"/>
 
-    <LinearLayout android:layout_width="match_parent"
-                  android:orientation="vertical"
-                  android:layout_height="match_parent"
-    >
+    <net.anapsil.components.Tooltip
+            android:id="@+id/tooltip_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_anchor="@+id/edit_text1"
+            app:layout_anchorGravity="bottom|center_horizontal"/>
 
-        <EditText android:id="@+id/edit_text"
-                  android:layout_width="match_parent"
-                  android:layout_height="160dp"
-                  android:layout_gravity="center"
-                  android:background="@android:color/darker_gray"/>
+    <net.anapsil.components.Tooltip
+            android:id="@+id/tooltip_02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_anchor="@+id/edit_text3"
+            app:layout_anchorGravity="bottom|right"/>
 
-        <EditText android:id="@+id/edit_text1"
-                  android:layout_width="match_parent"
-                  android:layout_height="160dp"
-                  android:layout_gravity="center"
-                  android:background="@android:color/holo_blue_dark"/>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+        <EditText
+                android:id="@+id/edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:hint="TextEdit 01"
+                android:background="@android:color/darker_gray"/>
+
+        <EditText
+                android:id="@id/edit_text1"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:hint="Ancora 01"
+                android:background="@android:color/holo_orange_dark"/>
+
+        <EditText
+                android:id="@+id/edit_text2"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:hint="TextEdit 02"
+                android:background="@android:color/holo_green_dark"/>
+
+        <EditText
+                android:id="@id/edit_text3"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:hint="Ancora 02"
+                android:background="@android:color/holo_red_dark"/>
+
+        <EditText
+                android:id="@+id/edit_text4"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:hint="TextEdit 01"
+                android:background="@android:color/holo_purple"/>
+
 
     </LinearLayout>
-    <net.anapsil.components.Tooltip android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    app:layout_anchor="@id/edit_text1"
-                                    app:layout_anchorGravity="bottom|center_horizontal"/>
+
 </android.support.design.widget.CoordinatorLayout>

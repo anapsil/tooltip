@@ -4,22 +4,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
+                android:importantForAccessibility="yes"
+                android:focusable="true"
+                android:contentDescription="Tooltip flutuante"
                 android:background="@android:color/holo_blue_dark">
 
     <TextView
-            android:id="@+id/content"
+            android:id="@+id/text_content"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/close"
             android:maxLines="1"
             android:ellipsize="end"
-            android:text="Teste de uso do tooltip com texto bem grande pra quebrar linha e ver como q vai ficar na tela"/>
+            android:importantForAccessibility="no"
+            android:text="Texto de exemplo tooltip"/>
 
     <ImageView
             android:id="@id/close"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignRight="@id/content"
+            android:layout_alignRight="@id/text_content"
             android:contentDescription="Fechar tooltip"
             app:srcCompat="@drawable/ic_close"/>
+
 </RelativeLayout>

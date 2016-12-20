@@ -5,10 +5,14 @@ import android.support.v4.view.ViewCompat;
 import android.support.v7.widget.CardView;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.TextView;
 
 import net.anapsil.components.tooltip.R;
 
 public class Tooltip extends CardView {
+
+    private TextView mTextTooltip;
 
     public Tooltip(Context context) {
         super(context);
@@ -18,16 +22,33 @@ public class Tooltip extends CardView {
     public Tooltip(Context context, AttributeSet attrs) {
         super(context, attrs);
         inflateLayout();
+        hide();
     }
 
     public Tooltip(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         inflateLayout();
+        hide();
     }
 
     void inflateLayout() {
-        LayoutInflater.from(getContext()).inflate(R.layout.tooltip, this, true);
+        View inflate = LayoutInflater.from(getContext()).inflate(R.layout.tooltip, this, true);
+        mTextTooltip = (TextView) inflate.findViewById(R.id.text_content);
         setCardElevation(getResources().getDimensionPixelSize(R.dimen.tooltip_elevation));
+    }
+
+    public void setText(String text) {
+        mTextTooltip.setText(text);
+    }
+
+    public void hide() {
+        setVisibility(GONE);
+    }
+
+    public void show() {
+        setVisibility(VISIBLE);
+        setFocusableInTouchMode(true);
+        requestFocus();
     }
 
     @Override
@@ -39,7 +60,7 @@ public class Tooltip extends CardView {
 
     @Override
     public void offsetTopAndBottom(int offset) {
-        super.offsetTopAndBottom(offset + 120);
+        super.offsetTopAndBottom(offset + 70);
     }
 
 //    @Override
