@@ -12,6 +12,7 @@
 
     <net.anapsil.components.Tooltip
             android:id="@+id/tooltip_01"
+            android:accessibilityTraversalAfter="@+id/edit_text1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_anchor="@+id/edit_text1"
@@ -22,6 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_anchor="@+id/edit_text3"
+            android:accessibilityTraversalBefore="@id/edit_text3"
             app:layout_anchorGravity="bottom|right"/>
 
     <LinearLayout
